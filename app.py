@@ -18,6 +18,10 @@ def predict_route():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+@app.route('/')
+def home():
+    return 'Stock Price Prediction API is running!'
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=10000, debug=True)
 
